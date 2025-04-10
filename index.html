@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Pedido Fofo</title>
+  <style>
+    body {
+      background-color: #ffc6cc;
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin-top: 100px;
+      color: #a00038;
+    }
+
+    h1 {
+      font-size: 28px;
+      font-weight: bold;
+    }
+
+    .love-button {
+      background: none;
+      border: none;
+      cursor: pointer;
+      margin-top: 30px;
+      transition: transform 0.2s;
+    }
+
+    .love-button:hover {
+      transform: scale(1.1);
+    }
+
+    .love-ball {
+      width: 120px;
+      height: auto;
+    }
+
+    .no-button {
+      margin-top: 30px;
+      padding: 10px 20px;
+      font-size: 16px;
+      background: #ff4d6d;
+      color: white;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+      position: absolute;
+      transition: all 0.3s ease;
+    }
+
+    .no-button:hover {
+      background: #ff3355;
+    }
+  </style>
+</head>
+<body>
+  <h1>Joguei uma love ball... posso te capturar?</h1>
+
+  <button class="love-button" onclick="capturado()">
+    <img src="image.png" alt="Love Ball" class="love-ball">
+  </button>
+
+  <button class="no-button" onmouseover="desvia(this)">NÃO</button>
+
+  <script>
+    function capturado() {
+      alert("Você foi capturado pelo meu amor por você! 💘");
+    }
+
+    function desvia(btn) {
+      btn.style.position = 'absolute';
+      btn.style.top = Math.random() * window.innerHeight + 'px';
+      btn.style.left = Math.random() * window.innerWidth + 'px';
+    }
+  </script>
+</body>
+</html>
